@@ -6,7 +6,7 @@ process qiime_hello {
     stdout result
 
     """
-    echo $home 
+    echo $HOME 
     #PYTHONPATH='/usr/lib/python2.7'
     #source /opt/qiime_deps/activate.sh
     #print_qiime_config.py -tf
