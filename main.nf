@@ -12,7 +12,8 @@ process qiime_hello {
     #echo $PATH
     #conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
     PYTHONPATH='/usr/lib/python2.7'
-    source /opt/qiime_deps/activate.sh
+    docker run --rm vimalkvn/qiime /bin/bash -c \
+      "source /opt/qiime_deps/activate.sh;print_qiime_config.py"
     print_qiime_config.py -tf
     """
 }
